@@ -1,0 +1,20 @@
+<div class="container">
+	<h1 class="headline">{{ pageTitle }}</h1>
+
+	<div class="card" *ngFor="let doc of documents">
+		<img src="{{ doc.image_url }}" class="card-img-top w-100 images-container" alt="...">
+		
+		<div class="card-body">
+
+			<h5 class="card-title">{{ doc.title }}</h5>
+
+			<p class="card-text">{{ doc.description }}</p>
+
+			<p class="card-text"><small class="text-muted">{{ doc.updated_at }}</small></p>
+			
+			<div class="btn btn-primary">
+				<a class="docs-download-button" href="{{ doc.file_url }}">Download File</a>
+			</div>
+		</div>
+	</div>
+</div>
